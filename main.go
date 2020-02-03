@@ -118,10 +118,35 @@ type Book struct {
 	Author *Author `json:"author"`
 }
 
-//Author Struct
+// Author Struct
 type Author struct {
 	Firstname string `json:"firstname"`
 	Lastname  string `json:"lastname"`
+}
+
+// get all books
+func getBooks(w http.ResponseWriter, r *http.Request) {
+
+}
+
+// get one book
+func getBook(w http.ResponseWriter, r *http.Request) {
+
+}
+
+// create new book
+func createBook(w http.ResponseWriter, r *http.Request) {
+
+}
+
+// update book
+func updateBook(w http.ResponseWriter, r *http.Request) {
+
+}
+
+// delete book
+func deleteBook(w http.ResponseWriter, r *http.Request) {
+
 }
 
 func main() {
