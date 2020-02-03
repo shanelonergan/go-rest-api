@@ -161,6 +161,7 @@ func createBook(w http.ResponseWriter, r *http.Request) {
 	_ = json.NewDecoder(r.Body).Decode(&book)
 	book.ID = strconv.Itoa(rand.Intn(10000000)) //Mock ID, not safe
 	books = append(books, book)
+	json.NewEncoder(w).Encode(book)
 }
 
 // update book
