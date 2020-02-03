@@ -104,6 +104,7 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
 
@@ -129,7 +130,8 @@ var books []Book
 
 // get all books
 func getBooks(w http.ResponseWriter, r *http.Request) {
-
+	w.header().set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(books)
 }
 
 // get one book
